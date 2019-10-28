@@ -8,8 +8,9 @@ function accum(s) {
         for(let n = 0; n<i+1; n++){
             if(n == 0){
                 mumbled += s[i].toUpperCase();
+            }else{
+                mumbled += s[i].toLowerCase();
             }
-            mumbled += s[i].toLowerCase();
         }
         if(i != s.length -1 ){
             mumbled += "-";
