@@ -14,7 +14,7 @@ function findOdd(arr) {
             foundOdds.push(arr[0]);
         }
         else{
-            
+
             let foundMatch = false;
 
             //check to see if the element is in the odds array
@@ -24,7 +24,7 @@ function findOdd(arr) {
                     foundMatch = true;
                     break;
                 }
-                console.log(foundOdds);
+                console.log(foundOdds);            
             }
             //if we didn't find it we need to add it
             if(!foundMatch){

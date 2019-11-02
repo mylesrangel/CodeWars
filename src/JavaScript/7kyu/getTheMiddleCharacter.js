@@ -29,7 +29,6 @@ function getMiddle(s)
         return s[Math.floor(s.length / 2)];
     }
     
-
 }
 
 console.log(getMiddle("testing"));
