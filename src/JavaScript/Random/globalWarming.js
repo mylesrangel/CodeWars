@@ -1,6 +1,4 @@
 
-
-
 //Given an array of values return the value at which the two days with the greatest change in temperature
 //I.E. given: [22,32,10,15,27,33,50,53] // returns 23 because 27 to 50 is a temp increase of 23
 
@@ -12,7 +10,6 @@
 
 function GlobalWarming(arr){
     let maxTemp = 0;
-    console.log(maxTemp);
 
     //do magic here
     for(let i = 0; i<arr.length - 1; i++){
