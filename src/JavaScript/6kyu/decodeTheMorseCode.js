@@ -33,24 +33,38 @@
 decodeMorse = function(morseCode){
     //your code here
     result = [];
-    console.log(morseCode);
+
     //split the morse code into words
-    let morseWord = morseCode.split("  ");
-    //console.log(MORSE_CODE[morseWord[0]]) //returns H
-    console.log(morseWord[0])
+    let morseWord = morseCode.split("   ");
+
     for(let i = 0; i<morseWord.length; i++){
-        let morseLetter = morseWord.toString().split(" ");
-        console.log(morseLetter);
+        let morseLetter = morseWord[i].toString().split(" ");
+        console.log(morseLetter.length)
+        console.log(morseLetter[0]);
         for(let n = 0; n<morseLetter.length; n++){
-            
-            result.push(MORSE_CODE[morseLetter[n]]);
+            console.log(result.push(morseLetter[n]));
+            //result.push(MORSE_CODE[morseLetter[n]]);
         }
         result.push(" ");
     }
-    return result.toString();
+    return result.join("");
 }
 
-console.log(decodeMorse('.... . -.--   .--- ..- -.. .')); //HEY JUDE
+//console.log(decodeMorse('.... . -.--   .--- ..- -.. .')); //HEY JUDE
+console.log(decodeMorse('A B C D   E F G'));
+
+
+//BEST PRACTICE
+
+// decodeMorse = function(morseCode){
+//     function decodeMorseLetter(letter) {
+//       return MORSE_CODE[letter];
+//     }
+//     function decodeMorseWord(word) {
+//       return word.split(' ').map(decodeMorseLetter).join('');
+//     }
+//     return morseCode.trim().split('   ').map(decodeMorseWord).join(' ');
+//   }
 
 
 
