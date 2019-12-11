@@ -12,6 +12,7 @@ def bonus_time(salary, bonus):
     #your code here
     print(salary)
 
+
 print(bonus_time(10000, True), '$100000')
 # print(bonus_time(25000, True), '$250000')
 # print(bonus_time(10000, False), '$10000')

@@ -54,10 +54,7 @@
 function solveMine(map,n){
     //conding and coding..
 
-
-
     console.log(map.length);
-    
     
   }
 

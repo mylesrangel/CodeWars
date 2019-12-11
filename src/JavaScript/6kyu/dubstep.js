@@ -21,8 +21,6 @@
 function songDecoder(song){
     //replaces all iterations with a '' then replaces multiple spaces with just one space.
 
-    
-
     return song.replace(/WUB/g ,' ').replace(/ +/g , ' ').trim();
 
 
