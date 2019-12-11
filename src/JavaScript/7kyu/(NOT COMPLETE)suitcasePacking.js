@@ -21,22 +21,30 @@ function fit_in(a, b, m, n) {
 
     let trueOrFalse;
 
-    console.log(a);
-    console.log(b);
+    //console.log(a);
+    console.log(a * a)
+    //console.log(b);
+    console.log(b*b)
     console.log(m);
     console.log(n);
 
+    console.log(a + a + b+b <= m + n)
 
-    return true;
+
+    if(a*a + b*b <= m + n){
+        return true;
+    }
+
+    return false;
 }
 
 
 
 console.log(fit_in(1,2,3,2), true);
-//console.log(fit_in(1,2,2,1), false);
-//console.log(fit_in(3,2,3,2), false);
-//console.log(fit_in(1,2,1,2), false);
-//console.log(fit_in(6,5,8,7), false);
+// console.log(fit_in(1,2,2,1), false);
+// console.log(fit_in(3,2,3,2), false);
+// console.log(fit_in(1,2,1,2), false);
+// console.log(fit_in(6,5,8,7), false);
 
 
 

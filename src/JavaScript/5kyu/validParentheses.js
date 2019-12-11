@@ -9,9 +9,7 @@
 // 0 <= input.length <= 100
 
 
-
 function validParentheses(parens){
-    //TODO 
     console.log(typeof(parens));
     console.log(parens);
     console.log(parens[0]);
@@ -22,7 +20,7 @@ function validParentheses(parens){
     };
 
     console.log(opposite[parens[0]])
-    parens.split('').map((valve, index, arr))
+    parens.split('').map((valve, index, arr));
 }
 
 console.log(validParentheses( "()" ), true);
