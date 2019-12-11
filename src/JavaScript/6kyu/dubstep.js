@@ -16,14 +16,37 @@
 // songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB")
 //   // =>  WE ARE THE CHAMPIONS MY FRIEND
 
+//ATTEMPT 1 -------------------------------------------------------------------------------
 
 function songDecoder(song){
     //replaces all iterations with a '' then replaces multiple spaces with just one space.
+
+    
+
     return song.replace(/WUB/g ,' ').replace(/ +/g , ' ').trim();
+
+
+
 }
 
 
-console.log(songDecoder("AWUBBWUBC"), "A B C",);
-console.log(songDecoder("AWUBWUBWUBBWUBWUBWUBC"), "A B C");
-console.log(songDecoder("WUBAWUBBWUBCWUB"), "A B C");
+// console.log(songDecoder("AWUBBWUBC"), "A B C",);
+// console.log(songDecoder("AWUBWUBWUBBWUBWUBWUBC"), "A B C");
+// console.log(songDecoder("WUBAWUBBWUBCWUB"), "A B C");
+
+
+
+//BEST PRACTICE 
+
+// function songDecoder(song){
+//     return song.replace(/(WUB)+/g," ").trim()
+//   }
+
+
+
+//ANOTHER ONE ---------------------------------
+
+// var songDecoder = (song) => song.split('WUB').filter(x => x !== '').join(' ')
+
+
 
