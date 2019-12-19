@@ -10,13 +10,56 @@
 
 
 
-String.prototype.toJadenCase = function () {
-    //...
+
+var toJadenCase = function (str) {
 
     console.log("test");
 
+    splitStr = str.split(" ");
+
+    console.log(splitStr[0].toLowerCase() + splitStr.slice(1));
+
+    splitStr.map((word , i) => {
+        splitStr[i] = word.charAt(0).toUpperCase() + word.slice(1);
+    });
+    
+    splitStr = splitStr.join(' ');
+
+    console.log(splitStr);
+
+
+
+
+    // console.log(typeof(str));
+
+    // console.log(str.indexOf(' '));
+
+    // let currentIndex = str.indexOf(' ');
+    // let oldIndex = 0;
+    // let newString = ''
+
+    // while(currentIndex != -1){
+    //     console.log(currentIndex);
+    //     // str[currentIndex + 1].toUpperCase();
+    //     str.substring(currentIndex+1, currentIndex+2).toUpperCase();
+    //     console.log(str[currentIndex + 1]);
+    //     oldIndex = currentIndex;
+    //     currentIndex = str.indexOf(' ', currentIndex + 1);
+    // }
+
+
+    
+    return splitStr;
+    
 };
 
 
 
-console.log(str.toJadenCase(), "How Can Mirrors Be Real If Our Eyes Aren't Real");
+console.log(toJadenCase("How can mirrors be real if our eyes aren't real"), "How Can Mirrors Be Real If Our Eyes Aren't Real");
+
+
+
+
+//BEST PRACTICE
+
+//MINE!!!

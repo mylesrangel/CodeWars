@@ -11,8 +11,9 @@ function isIsogram(str){
 
 
         for(let i = 0; i<str.length; i++){
-
+            
             let regex = new RegExp('(\n.*)*' + str[i].toLowerCase(), 'g');
+            
 
             if(str.toLowerCase().match(regex).length >= 2){
                 return false;
