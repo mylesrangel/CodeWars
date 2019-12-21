@@ -198,9 +198,16 @@ function shiftOrderAndPutSpacesBackInString(str, spaceLocations, n){
             tempStr += ' ' + shiftOrderOfSubstring(str.slice((spaceLocations[i - 1] -(i-1)), spaceLocations[i] - i), n);
         }
     }
-    tempStr += ' ' + str[str.length-1] + shiftOrderOfSubstring(str.slice(spaceLocations[spaceLocations.length - 1] - (spaceLocations.length - 1), str.length -1));
+    //tempStr += ' ' + str[str.length-1] + shiftOrderOfSubstring(str.slice(spaceLocations[spaceLocations.length - 1] - (spaceLocations.length - 1), str.length -1));
+
+
 
     console.log(tempStr);
+
+
+    //NEED TO EQUAL: eu vni seer .I oufy wi shtom eak apan frplepie som atcr ch,yo ustfum sir htinventt
+
+
     return tempStr;
 
 
@@ -217,7 +224,7 @@ IterativeRotationCipher.encode = function(n,str){
     let count = 0; 
     
 
-    while(count < n){
+    //while(count < n){
 
         console.log(str);
 
@@ -264,7 +271,7 @@ IterativeRotationCipher.encode = function(n,str){
 
         console.log(str);
         count++;
-    }
+    //}
 
     console.log(str);
     //should return '10 hu fmo a,ys vi utie mr snehn rni tvte .ysushou teI fwea pmapi apfrok rei tnocsclet'
