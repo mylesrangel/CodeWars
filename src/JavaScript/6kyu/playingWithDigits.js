@@ -50,8 +50,6 @@ function digPow(n, p){
 
     //need to find k
     //k is a integer multiplied by n to equal powered result
-
-    
     if(Number.isInteger(poweredResult / n )){
         return poweredResult / n;
     }else{
@@ -68,3 +66,19 @@ console.log(digPow(89, 1), 1)
 
 
 
+
+//BEST PRACTICE
+
+// function digPow(n, p) {
+//     var x = String(n).split("").reduce((s, d, i) => s + Math.pow(d, p + i), 0)
+//     return x % n ? -1 : x / n
+//   }
+
+
+
+// function digPow(n, p){
+//     var ans = (''+n).split('')
+//       .map(function(d,i){return Math.pow(+d,i+p) })
+//       .reduce(function(s,v){return s+v}) / n
+//     return ans%1 ? -1 : ans    
+//   }//z.

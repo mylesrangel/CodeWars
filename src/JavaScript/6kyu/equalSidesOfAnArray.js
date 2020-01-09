@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 // You are going to be given an array of integers. Your job is to take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.
 
 // For example:
@@ -27,36 +29,82 @@
 // Note:
 // If you are given an array with multiple answers, return the lowest correct index.
 
-function sumOfleftSide(arr,index){
-
-    arr.forEach(value => console.log(value.index));
-
-
-}
-
-function sumOfRightSide(arr,index){
-
-}
-
-
 function findEvenIndex(arr){
 
     let leftSide = 0;
     let rightSide = 0;
+    let indexLocation = 0;
 
+    console.log(arr); //sum 16
 
-    console.log(sumOfleftSide(arr,leftSide));
-    
-    //loop through the array from 0 to the current index and sum up the values
-    //loop through the array from index to the end of array and sum up the right side
+    while(indexLocation <= arr.length){
+        leftSide = 0;
+        rightSide = 0;
 
-    //if the right side is equal to the left side return index
+        leftSide = arr.reduce((acc,value,i) => {
+            console.log(i);
+            if(i < indexLocation){
+                return (acc + value);
+            }else{
+                return acc;
+            }
+        },0);
+
+        rightSide = arr.reduce((acc,value,i) =>{
+            if(i > indexLocation){
+                return acc + value;
+            }else{
+                return 0;
+            }
+        },0);
+
+        console.log(leftSide);
+        console.log(rightSide);
+        
+
+        //if the right side is equal to the left side return index
+        if(leftSide === rightSide){
+            return indexLocation;
+        }
+        indexLocation++;
+    }
+    return -1;
 
 }
 
 
 
 console.log(findEvenIndex([1,2,3,4,3,2,1]),3, "The array was: [1,2,3,4,3,2,1] \n");
-console.log(findEvenIndex([1,100,50,-51,1,1]),1, "The array was: [1,100,50,-51,1,1] \n");
-console.log(findEvenIndex([1,2,3,4,5,6]),-1, "The array was: [1,2,3,4,5,6] \n");
-console.log(findEvenIndex([20,10,30,10,10,15,35]),3, "The array was: [20,10,30,10,10,15,35] \n");
+// console.log(findEvenIndex([1,100,50,-51,1,1]),1, "The array was: [1,100,50,-51,1,1] \n");
+// console.log(findEvenIndex([1,2,3,4,5,6]),-1, "The array was: [1,2,3,4,5,6] \n");
+// console.log(findEvenIndex([20,10,30,10,10,15,35]),3, "The array was: [20,10,30,10,10,15,35] \n");
+
+
+
+
+//BEST PRACTICE
+
+// function findEvenIndex(arr)
+// {
+//   for(var i=1; i<arr.length-1; i++) {
+//     if(arr.slice(0, i).reduce((a, b) =>  a+b) === arr.slice(i+1).reduce((a, b) =>  a+b)) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+
+
+// function findEvenIndex(arr)
+// {
+//   var left = 0, right = arr.reduce(function(pv, cv) { return pv + cv; }, 0);
+//   for(var i = 0; i < arr.length; i++) {
+//       if(i > 0) left += arr[i-1];
+//       right -= arr[i];
+      
+//       if(left == right) return i;
+//   }
+  
+//   return -1;
+// }

@@ -27,7 +27,7 @@ function duplicateCount(text){
     return count;
 }
 
-
+    
 
 
 //console.log(duplicateCount(""), 0);
